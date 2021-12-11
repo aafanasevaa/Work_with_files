@@ -42,7 +42,7 @@ public class Tests extends TestData {
     @DisplayName("Загрузка изображения на сайте")
     public void uploadPicture() {
         open(picUrl);
-        $(".dz-clickable").uploadFromClasspath("png.jpg");
-        $(".controls").shouldHave(text("успешно загружено"));
+        $(".standard_upload").uploadFromClasspath(namePicture);
+        $(".upload-item").shouldHave(text(namePicture));
     }
 }
